@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Fira Code', ui-monospace, SFMono-Regular, monospace;
+  }
+}
+
+/* Minimal Terminal Theme Custom Colors & Utility Classes */
+.bg-term-bg {
+  background-color: #0B0D0F;
+}
+
+.bg-term-panel {
+  background-color: #101316;
+}
+
+.border-term-border {
+  border-color: #20252A;
+}
+
+.text-term-primary {
+  color: #E6E8EA;
+}
+
+.text-term-secondary {
+  color: #7F8990;
+}
+
+.text-term-accent {
+  color: #10B981;
+}
+
+/* Terminal Blinking Cursor */
+@keyframes term-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-term-blink {
+  animation: term-blink 1s step-end infinite;
+}
+
+/* Technical micro pulse animation */
+@keyframes pulse-emerald {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.95); }
+}
+
+.animate-pulse-emerald {
+  animation: pulse-emerald 1.8s ease-in-out infinite;
+}
+
+/* Minimal Scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #20252A;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B4248;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #20252A;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3B4248;
+}

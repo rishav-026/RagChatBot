@@ -1,0 +1,242 @@
+[
+  {
+    "id": "eval_1",
+    "category": "easy",
+    "question": "What is the standard employee annual leave entitlement?",
+    "expected_answer": "25 paid vacation days per year",
+    "expected_source": "employee_handbook.pdf",
+    "expected_keywords": ["25", "vacation days", "paid leave"]
+  },
+  {
+    "id": "eval_2",
+    "category": "easy",
+    "question": "What are the allowed remote work days for full-time employees?",
+    "expected_answer": "Remote work is permitted on Mondays and Fridays",
+    "expected_source": "remote_work_policy.pdf",
+    "expected_keywords": ["Mondays", "Fridays", "remote work"]
+  },
+  {
+    "id": "eval_3",
+    "category": "exact_keyword",
+    "question": "What is the policy code for Expense Reimbursements?",
+    "expected_answer": "POL-EXP-2024",
+    "expected_source": "financial_policies.docx",
+    "expected_keywords": ["POL-EXP-2024"]
+  },
+  {
+    "id": "eval_4",
+    "category": "no_answer",
+    "question": "What is the company's policy on interplanetary space travel allowances?",
+    "expected_answer": "I couldn't find enough relevant information in the uploaded documents to answer this question.",
+    "expected_source": null,
+    "expected_keywords": ["not found", "insufficient information"]
+  },
+  {
+    "id": "eval_5",
+    "category": "multi_hop",
+    "question": "How does sick leave approval differ between regular illness and extended medical leave exceeding 5 days?",
+    "expected_answer": "Regular sick leave requires self-certification via portal, while medical leave exceeding 5 consecutive days requires a certified doctor's note.",
+    "expected_source": "employee_handbook.pdf",
+    "expected_keywords": ["doctor's note", "5 days", "self-certification"]
+  },
+  {
+    "id": "eval_6",
+    "category": "ambiguous",
+    "question": "What happens if I submit my expense report late?",
+    "expected_answer": "Late expense reports submitted after 30 days require department head approval.",
+    "expected_source": "financial_policies.docx",
+    "expected_keywords": ["30 days", "department head approval"]
+  },
+  {
+    "id": "eval_7",
+    "category": "exact_keyword",
+    "question": "What is the maximum limit for unreceipted meal expenses on business travel?",
+    "expected_answer": "$25 per meal",
+    "expected_source": "travel_policy.pdf",
+    "expected_keywords": ["$25", "meal"]
+  },
+  {
+    "id": "eval_8",
+    "category": "multi_section",
+    "question": "What security protocols apply when working remotely from a public coffee shop?",
+    "expected_answer": "Employees must connect via Company VPN and enable privacy screens on public Wi-Fi.",
+    "expected_source": "it_security_guide.pdf",
+    "expected_keywords": ["VPN", "privacy screens", "public Wi-Fi"]
+  },
+  {
+    "id": "eval_9",
+    "category": "easy",
+    "question": "When is annual performance evaluation conducted?",
+    "expected_answer": "Annual performance evaluations take place in November.",
+    "expected_source": "hr_calendar.txt",
+    "expected_keywords": ["November", "annual performance evaluation"]
+  },
+  {
+    "id": "eval_10",
+    "category": "no_answer",
+    "question": "What is the secret recipe for the cafeteria soup?",
+    "expected_answer": "I couldn't find enough relevant information in the uploaded documents to answer this question.",
+    "expected_source": null,
+    "expected_keywords": ["insufficient information"]
+  },
+  {
+    "id": "eval_11",
+    "category": "easy",
+    "question": "What is the probation period duration for new hires?",
+    "expected_answer": "The probation period is 90 days from the start date.",
+    "expected_source": "hr_policy.pdf",
+    "expected_keywords": ["90 days", "probation"]
+  },
+  {
+    "id": "eval_12",
+    "category": "multi_hop",
+    "question": "Does parental leave apply to adoptive parents and what is the leave period?",
+    "expected_answer": "Yes, adoptive parents receive 12 weeks of fully paid parental leave.",
+    "expected_source": "parental_leave_policy.pdf",
+    "expected_keywords": ["12 weeks", "adoptive parents", "parental leave"]
+  },
+  {
+    "id": "eval_13",
+    "category": "exact_keyword",
+    "question": "What is the IT Helpdesk support phone extension?",
+    "expected_answer": "Extension 4357 (HELP)",
+    "expected_source": "it_contact_list.txt",
+    "expected_keywords": ["4357", "HELP"]
+  },
+  {
+    "id": "eval_14",
+    "category": "ambiguous",
+    "question": "Can I rollover unused vacation days to the next year?",
+    "expected_answer": "Up to 5 unused vacation days can be carried over to the first quarter of the following year.",
+    "expected_source": "employee_handbook.pdf",
+    "expected_keywords": ["5 unused days", "carried over", "Q1"]
+  },
+  {
+    "id": "eval_15",
+    "category": "no_answer",
+    "question": "What are the stock ticker symbols for company competitors?",
+    "expected_answer": "I couldn't find enough relevant information in the uploaded documents to answer this question.",
+    "expected_source": null,
+    "expected_keywords": ["insufficient information"]
+  },
+  {
+    "id": "eval_16",
+    "category": "easy",
+    "question": "What is the core working hours requirement?",
+    "expected_answer": "Core hours are 10:00 AM to 4:00 PM local time.",
+    "expected_source": "attendance_policy.pdf",
+    "expected_keywords": ["10:00 AM", "4:00 PM", "core hours"]
+  },
+  {
+    "id": "eval_17",
+    "category": "exact_keyword",
+    "question": "What model of laptop is issued to engineering staff?",
+    "expected_answer": "MacBook Pro 16-inch M3 Max or Dell XPS 15",
+    "expected_source": "hardware_standards.docx",
+    "expected_keywords": ["MacBook Pro", "M3 Max", "Dell XPS 15"]
+  },
+  {
+    "id": "eval_18",
+    "category": "multi_section",
+    "question": "What steps are required to report a lost corporate credit card?",
+    "expected_answer": "Immediately call Bank Customer Care, notify Finance Dept in portal, and request a replacement card.",
+    "expected_source": "financial_policies.docx",
+    "expected_keywords": ["Bank Customer Care", "Finance Dept", "replacement card"]
+  },
+  {
+    "id": "eval_19",
+    "category": "ambiguous",
+    "question": "Is educational tuition reimbursement provided?",
+    "expected_answer": "Up to $3,000 per year is reimbursed for pre-approved job-related courses.",
+    "expected_source": "learning_development.pdf",
+    "expected_keywords": ["$3,000", "tuition reimbursement"]
+  },
+  {
+    "id": "eval_20",
+    "category": "no_answer",
+    "question": "Who won the World Cup in 2022?",
+    "expected_answer": "I couldn't find enough relevant information in the uploaded documents to answer this question.",
+    "expected_source": null,
+    "expected_keywords": ["insufficient information"]
+  },
+  {
+    "id": "eval_21",
+    "category": "easy",
+    "question": "How many company paid holidays are observed each calendar year?",
+    "expected_answer": "11 paid company holidays per year.",
+    "expected_source": "hr_calendar.txt",
+    "expected_keywords": ["11 paid company holidays"]
+  },
+  {
+    "id": "eval_22",
+    "category": "exact_keyword",
+    "question": "What is the Wi-Fi network SSID for visitors?",
+    "expected_answer": "Corp-Guest-Secure",
+    "expected_source": "office_guide.pdf",
+    "expected_keywords": ["Corp-Guest-Secure"]
+  },
+  {
+    "id": "eval_23",
+    "category": "multi_hop",
+    "question": "What is the deadline for submitting Q4 performance feedback and who must review it?",
+    "expected_answer": "December 15th, reviewed by Direct Manager and HR BP.",
+    "expected_source": "hr_calendar.txt",
+    "expected_keywords": ["December 15th", "Direct Manager", "HR BP"]
+  },
+  {
+    "id": "eval_24",
+    "category": "easy",
+    "question": "What is the minimum notice period required for voluntary resignation?",
+    "expected_answer": "2 weeks advance written notice.",
+    "expected_source": "employee_handbook.pdf",
+    "expected_keywords": ["2 weeks", "notice period"]
+  },
+  {
+    "id": "eval_25",
+    "category": "no_answer",
+    "question": "What is the current stock price of Apple Inc?",
+    "expected_answer": "I couldn't find enough relevant information in the uploaded documents to answer this question.",
+    "expected_source": null,
+    "expected_keywords": ["insufficient information"]
+  },
+  {
+    "id": "eval_26",
+    "category": "exact_keyword",
+    "question": "What is the document code for the Information Security Policy?",
+    "expected_answer": "SEC-POL-001",
+    "expected_source": "it_security_guide.pdf",
+    "expected_keywords": ["SEC-POL-001"]
+  },
+  {
+    "id": "eval_27",
+    "category": "multi_section",
+    "question": "What are the rules regarding personal equipment connection to corporate network?",
+    "expected_answer": "Personal equipment is strictly prohibited on production network without MDM registration.",
+    "expected_source": "it_security_guide.pdf",
+    "expected_keywords": ["MDM registration", "prohibited"]
+  },
+  {
+    "id": "eval_28",
+    "category": "ambiguous",
+    "question": "What is the policy for jury duty leave?",
+    "expected_answer": "Up to 10 days of paid leave is granted for jury duty with official summons proof.",
+    "expected_source": "hr_policy.pdf",
+    "expected_keywords": ["10 days", "jury duty"]
+  },
+  {
+    "id": "eval_29",
+    "category": "easy",
+    "question": "Is bereavement leave provided for immediate family members?",
+    "expected_answer": "Yes, 5 consecutive days of paid bereavement leave is provided.",
+    "expected_source": "hr_policy.pdf",
+    "expected_keywords": ["5 days", "bereavement leave"]
+  },
+  {
+    "id": "eval_30",
+    "category": "no_answer",
+    "question": "How do I configure a Kubernetes cluster on Google Cloud Platform?",
+    "expected_answer": "I couldn't find enough relevant information in the uploaded documents to answer this question.",
+    "expected_source": null,
+    "expected_keywords": ["insufficient information"]
+  }
+]

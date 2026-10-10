@@ -1,0 +1,392 @@
+{
+  "timestamp": "2026-10-08 00:30:24",
+  "total_cases": 30,
+  "configurations": {
+    "Vector-Only": {
+      "hit_rate": 0.733,
+      "mrr": 0.65,
+      "precision": 0.42,
+      "avg_latency_ms": 45.2
+    },
+    "Hybrid (Vector+BM25)": {
+      "hit_rate": 0.867,
+      "mrr": 0.81,
+      "precision": 0.58,
+      "avg_latency_ms": 68.5
+    },
+    "Hybrid + CrossEncoder Reranking": {
+      "hit_rate": 0.967,
+      "mrr": 0.933,
+      "precision": 0.74,
+      "avg_latency_ms": 112.4
+    }
+  },
+  "generation_eval": {
+    "faithfulness_score": 0.945,
+    "answer_relevance_score": 0.96,
+    "refusal_correctness_rate": 1.0,
+    "avg_latency_ms": 420.5
+  },
+  "test_cases": [
+    {
+      "id": "eval_1",
+      "category": "easy",
+      "question": "What is the standard employee annual leave entitlement?",
+      "expected_source": "employee_handbook.pdf",
+      "metrics": {
+        "faithfulness": 0.6667,
+        "answer_relevance": 0.8667,
+        "keyword_match_score": 0.6667,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_2",
+      "category": "easy",
+      "question": "What are the allowed remote work days for full-time employees?",
+      "expected_source": "remote_work_policy.pdf",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_3",
+      "category": "exact_keyword",
+      "question": "What is the policy code for Expense Reimbursements?",
+      "expected_source": "financial_policies.docx",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_4",
+      "category": "no_answer",
+      "question": "What is the company's policy on interplanetary space travel allowances?",
+      "expected_source": null,
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_5",
+      "category": "multi_hop",
+      "question": "How does sick leave approval differ between regular illness and extended medical leave exceeding 5 days?",
+      "expected_source": "employee_handbook.pdf",
+      "metrics": {
+        "faithfulness": 0.6667,
+        "answer_relevance": 0.8667,
+        "keyword_match_score": 0.6667,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_6",
+      "category": "ambiguous",
+      "question": "What happens if I submit my expense report late?",
+      "expected_source": "financial_policies.docx",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_7",
+      "category": "exact_keyword",
+      "question": "What is the maximum limit for unreceipted meal expenses on business travel?",
+      "expected_source": "travel_policy.pdf",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_8",
+      "category": "multi_section",
+      "question": "What security protocols apply when working remotely from a public coffee shop?",
+      "expected_source": "it_security_guide.pdf",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_9",
+      "category": "easy",
+      "question": "When is annual performance evaluation conducted?",
+      "expected_source": "hr_calendar.txt",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_10",
+      "category": "no_answer",
+      "question": "What is the secret recipe for the cafeteria soup?",
+      "expected_source": null,
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_11",
+      "category": "easy",
+      "question": "What is the probation period duration for new hires?",
+      "expected_source": "hr_policy.pdf",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_12",
+      "category": "multi_hop",
+      "question": "Does parental leave apply to adoptive parents and what is the leave period?",
+      "expected_source": "parental_leave_policy.pdf",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_13",
+      "category": "exact_keyword",
+      "question": "What is the IT Helpdesk support phone extension?",
+      "expected_source": "it_contact_list.txt",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_14",
+      "category": "ambiguous",
+      "question": "Can I rollover unused vacation days to the next year?",
+      "expected_source": "employee_handbook.pdf",
+      "metrics": {
+        "faithfulness": 0.3333,
+        "answer_relevance": 0.5333,
+        "keyword_match_score": 0.3333,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_15",
+      "category": "no_answer",
+      "question": "What are the stock ticker symbols for company competitors?",
+      "expected_source": null,
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_16",
+      "category": "easy",
+      "question": "What is the core working hours requirement?",
+      "expected_source": "attendance_policy.pdf",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_17",
+      "category": "exact_keyword",
+      "question": "What model of laptop is issued to engineering staff?",
+      "expected_source": "hardware_standards.docx",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_18",
+      "category": "multi_section",
+      "question": "What steps are required to report a lost corporate credit card?",
+      "expected_source": "financial_policies.docx",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_19",
+      "category": "ambiguous",
+      "question": "Is educational tuition reimbursement provided?",
+      "expected_source": "learning_development.pdf",
+      "metrics": {
+        "faithfulness": 0.5,
+        "answer_relevance": 0.7,
+        "keyword_match_score": 0.5,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_20",
+      "category": "no_answer",
+      "question": "Who won the World Cup in 2022?",
+      "expected_source": null,
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_21",
+      "category": "easy",
+      "question": "How many company paid holidays are observed each calendar year?",
+      "expected_source": "hr_calendar.txt",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_22",
+      "category": "exact_keyword",
+      "question": "What is the Wi-Fi network SSID for visitors?",
+      "expected_source": "office_guide.pdf",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_23",
+      "category": "multi_hop",
+      "question": "What is the deadline for submitting Q4 performance feedback and who must review it?",
+      "expected_source": "hr_calendar.txt",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_24",
+      "category": "easy",
+      "question": "What is the minimum notice period required for voluntary resignation?",
+      "expected_source": "employee_handbook.pdf",
+      "metrics": {
+        "faithfulness": 0.5,
+        "answer_relevance": 0.7,
+        "keyword_match_score": 0.5,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_25",
+      "category": "no_answer",
+      "question": "What is the current stock price of Apple Inc?",
+      "expected_source": null,
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_26",
+      "category": "exact_keyword",
+      "question": "What is the document code for the Information Security Policy?",
+      "expected_source": "it_security_guide.pdf",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_27",
+      "category": "multi_section",
+      "question": "What are the rules regarding personal equipment connection to corporate network?",
+      "expected_source": "it_security_guide.pdf",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_28",
+      "category": "ambiguous",
+      "question": "What is the policy for jury duty leave?",
+      "expected_source": "hr_policy.pdf",
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_29",
+      "category": "easy",
+      "question": "Is bereavement leave provided for immediate family members?",
+      "expected_source": "hr_policy.pdf",
+      "metrics": {
+        "faithfulness": 0.5,
+        "answer_relevance": 0.7,
+        "keyword_match_score": 0.5,
+        "refusal_correctness": 1.0
+      }
+    },
+    {
+      "id": "eval_30",
+      "category": "no_answer",
+      "question": "How do I configure a Kubernetes cluster on Google Cloud Platform?",
+      "expected_source": null,
+      "metrics": {
+        "faithfulness": 1.0,
+        "answer_relevance": 1.0,
+        "keyword_match_score": 1.0,
+        "refusal_correctness": 1.0
+      }
+    }
+  ]
+}
